@@ -1,66 +1,31 @@
+package skill;
+import skill.goa.*;
+import skill.thailand.*;
+import skill.maladaves.*;
 import java.util.*;
-public class prg {
-    public static void main(String[]args) {
-        int op,q,l,b,h,area,r;
-        float are,pi;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("select :\n 1.Area \n 2.perimeter \n 3.volume");
-        op=sc.nextInt();
-        if (op==1){
-            System.out.println("Select the shape:\n 1.square \n 2.rectangle \n 3.circle \n 4.triangle \n 5.Trapezium");
-            q=sc.nextInt();
-            if (q==1){
-                System.out.println("Enter the parameters");
-                System.out.println("Length:");
-                l=sc.nextInt();
-                area=l*l;
-                System.out.println("Area of Square:"+area);
-            }
-            else if (q==2){
-                System.out.println("Enter the parameters");
-                System.out.println("Length");
-                l=sc.nextInt();
-                System.out.println("Breadth");
-                b=sc.nextInt();
-                area=l*b;
-                System.out.println("Area of rectangle:"+area);
-            }
-            else if (q==3){
-                System.out.println("Enter the parameters");
-                System.out.println("Enter the radius:");
-                r=sc.nextInt();
-                pi=3.14f;
-                are=pi*r*r;
-                System.out.println("Area of circle:"+are);
-            }
-            else if (q==4){
-                System.out.println("Enter the parameters");
-                System.out.println("Enter the height:");
-                h=sc.nextInt();
-                System.out.println("Enter the Base:");
-                b=sc.nextInt();
-                are=0.5f*h*b;
-                System.out.println("Area of Triangle:"+are);
-            }
-            else if (q==5){
-                System.out.println("Enter the parameters");
-                System.out.println("Enter the height:");
-                h=sc.nextInt();
-                System.out.println("length of one parallel side:");
-                l=sc.nextInt();
-                System.out.println("length of another parallel side:");
-                b=sc.nextInt();
-                are=0.5f*(l+b)*h;
-                System.out.println("area of trapezium:"are);
-            }
-            else{
-                System.out.println("Invalid option");
-            }
-            }
-        else if(op==2){
-            System.out.println("select shape:");
-            System.out.println("1.square \n 2.rectangle \n 3.circle");
-            
-        }   
-        }        
-    }
+public class kkkk {
+	public static void main(String[] args) {
+		Scanner ob=new Scanner(System.in);
+		System.out.println("Welcome TO Tejus Travel Agencies");
+		System.out.println("Please Enter your city Name");
+		String c=ob.next();
+		System.out.println("Current Summer Package Avaliable");
+		System.out.println("\n 1.Goa \n 2.Thailand \n 3.Maldaves");
+		System.out.println("Select by entering no:");
+		int p=ob.nextInt();
+		if (p==1) {
+			skill.goa pp=new skill.goa();
+			pp.mm();
+		}
+		else if(p==2) {
+			skill.thailand ob2=new skill.thailand();
+			ob2.mm();
+		}
+		else if(p==3) {
+			skill.maladaves ob3=new skill.maladaves();
+			ob3.mm();
+		}
+		else
+			System.out.println("wrong input");	
+	}
+}
